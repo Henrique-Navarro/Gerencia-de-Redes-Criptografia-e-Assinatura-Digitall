@@ -18,7 +18,7 @@ public class CriptografiaSimetrica {
             cipher.init(Cipher.ENCRYPT_MODE, chave);
             byte[] encryptedBytes = cipher.doFinal(mensagem.getBytes(StandardCharsets.UTF_8));
             String mensagem_crip = Base64.getEncoder().encodeToString(encryptedBytes); 
-            System.out.println("Mensagem descriptografada: \n" + mensagem_crip);
+            //System.out.println("Mensagem criptografada: \n" + mensagem_crip);
             return mensagem_crip;
         } catch (Exception e) {
             e.printStackTrace();
@@ -32,7 +32,7 @@ public class CriptografiaSimetrica {
             cipher.init(Cipher.DECRYPT_MODE, chave);
             byte[] decryptedBytes = cipher.doFinal(Base64.getDecoder().decode(mensagemCriptografada));
             String mensagem = new String(decryptedBytes, StandardCharsets.UTF_8);
-            System.out.println("Mensagem criptografada: \n" + mensagem);
+            //System.out.println("Mensagem descriptografada: \n" + mensagem);
             return mensagem;
         } catch (Exception e) {
             e.printStackTrace();
