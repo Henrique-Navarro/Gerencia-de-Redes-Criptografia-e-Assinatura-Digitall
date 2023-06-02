@@ -18,7 +18,7 @@ public class CriptografiaAssimetrica {
             PrivateKey privateKey = keyPair.getPrivate();
 
             // Arquivo original
-            String inputFile = "arquivo.txt";
+            String inputFile = "input.txt";
             // Arquivo criptografado
             String encryptedFile = "arquivo_criptografado.enc";
             // Arquivo descriptografado
