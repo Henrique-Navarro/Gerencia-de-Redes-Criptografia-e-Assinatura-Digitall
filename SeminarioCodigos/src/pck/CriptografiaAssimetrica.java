@@ -9,6 +9,7 @@ public class CriptografiaAssimetrica {
     private static final String ALGORITHM = "RSA";
 
     public static void main(String[] args) {
+        //criptografia assimétrica utilizando o algoritmo RSA
         try {
             // Gerar par de chaves pública/privada
             KeyPairGenerator keyGen = KeyPairGenerator.getInstance(ALGORITHM);
@@ -16,6 +17,8 @@ public class CriptografiaAssimetrica {
             KeyPair keyPair = keyGen.generateKeyPair();
             PublicKey publicKey = keyPair.getPublic();
             PrivateKey privateKey = keyPair.getPrivate();
+
+
 
             // Arquivo original
             String inputFile = "input.txt";
